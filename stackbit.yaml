@@ -1,0 +1,76 @@
+stackbitVersion: ~0.3.0
+dataDir: ''
+models:
+  data_1:
+    type: data
+    label: Data 1
+    folder: ''
+    fields:
+      - type: string
+        name: extends
+        label: Extends
+      - type: object
+        name: compilerOptions
+        label: Compiler Options
+        fields:
+          - type: string
+            name: outDir
+            label: Out Dir
+          - type: string
+            name: baseUrl
+            label: Base Url
+          - type: string
+            name: module
+            label: Module
+          - type: list
+            name: types
+            label: Types
+            items:
+              type: string
+          - type: string
+            name: target
+            label: Target
+      - type: list
+        name: exclude
+        label: Exclude
+        items:
+          type: string
+  tsconfig_spec:
+    type: data
+    label: Tsconfig Spec
+    file: src/tsconfig.spec.json
+    fields:
+      - type: string
+        name: extends
+        label: Extends
+      - type: object
+        name: compilerOptions
+        label: Compiler Options
+        fields:
+          - type: string
+            name: outDir
+            label: Out Dir
+          - type: string
+            name: baseUrl
+            label: Base Url
+          - type: string
+            name: module
+            label: Module
+          - type: string
+            name: target
+            label: Target
+          - type: list
+            name: types
+            label: Types
+            items:
+              type: string
+      - type: list
+        name: files
+        label: Files
+        items:
+          type: string
+      - type: list
+        name: include
+        label: Include
+        items:
+          type: string
